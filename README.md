@@ -4,6 +4,10 @@ Renovate your project directory.
 
 A shell script for quickly setting up projects.
 
+## Usage
+
+Furbish is designed to run directly from Github in your empty project directory.
+
 **Run this command from your empty project root directory:**
 ```sh
 /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/MentallyFriendly/furbish/master/furbi.sh)"
