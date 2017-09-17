@@ -5,6 +5,10 @@ BLUE='\033[1;34m'
 ERR="\033[1;31m"
 NC='\033[0m'
 
+echo 
+echo "${GREEN}Furbishing a Polymer 3 project${NC}"
+echo
+
 if ! type "node" > /dev/null; then
     echo "${ERR}Node not found!" 1>&2
     echo "Please follow the install instructions at https://nodejs.org/en/ then try again${NC}" 1>&2
