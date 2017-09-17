@@ -13,7 +13,7 @@ echo "└  └─┘┴└─└─┘┴└─┘┴ ┴"
 echo "🚧 RENOVATE YOUR PROJECT DIRECTORY"
 echo 
 echo "${BLUE}1.${NC} Set up a Polymer 3 project"
-echo "${BLUE}2.${NC} Special thanks to the people who made this possible"
+echo "${BLUE}2.${NC} Credits & special thanks"
 echo 
 echo "What would you like to do? ($DEFAULT_OPTION): \c"
 read ACTION
@@ -22,8 +22,8 @@ read ACTION
 if [ "$ACTION" == "1" ]; then
     /bin/sh -c "$(curl -fsSL ${URL}/polymer3.sh)"
 elif [ "$ACTION" == "2" ]; then
-    echo "${GREEN}SPECIAL THANKS"
-    echo "Thanks to the people and organisations who made this possible"
+    echo 
+    echo "${GREEN}Thanks to the people and organisations who made this possible"
     echo 
     echo "${BLUE}Project Lead${NC}"
     echo "Liam Fiddler @liamfiddler"
