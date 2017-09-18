@@ -46,4 +46,4 @@ Beyond Github, we try to have a variety of different lines of communication avai
 
 ## License
 
-Furbish uses a BSD license available [here](LICENSE.txt)
+Furbish uses a BSD license available [here](LICENSE)
