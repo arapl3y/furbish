@@ -15,12 +15,17 @@ if ! type "node" > /dev/null; then
     exit
 fi
 
-if ! type "vue" > /dev/null; then
-    echo "${ERR} Vue CLI not found!" 
-    echo "Installing Vue CLI"
-    npm install -g vue-cli
+if ! type yarn > /dev/null; then
+    echo
+    echo "${ERR}Yarn not found!" 1>&2
+    echo "Please follow the install instructions at https://yarnpkg.com/en/docs/install then try again${NC}" 1>&2
+    exit
 fi
 
+if ! type "vue" > /dev/null; then
+    echo "${BLUE}Furbish:${NC} Installing Vue CLI"
+    npm install -g vue-cli
+fi
 
 # TODO: Add customisation for template name
 read -p "What would you like your app to be called? " appname
@@ -32,17 +37,10 @@ echo
 vue init MentallyFriendly/vue2-boilerplate $appname
 cd ./$appname
 
-if ! type yarn > /dev/null; then
-    echo
-    echo "${ERR}Yarn not found!" 1>&2
-    echo "Please follow the install instructions at https://yarnpkg.com/en/docs/install then try again${NC}" 1>&2
-    exit
-else
-    echo
-    echo "${BLUE}Furbish:${NC} Installing initial dependencies with yarn"
-    echo
-    yarn install
-fi
+echo
+echo "${BLUE}Furbish:${NC} Installing initial dependencies with yarn"
+echo
+yarn install
 
 echo 
 echo "${GREEN}SUCCESS! Your project directory is fully furbished! ${NC}"
